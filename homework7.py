@@ -1,27 +1,27 @@
 # Задание 1
 
 
-# # got = b'r\xc3\xa9sum\xc3\xa9'
-# # hou = got.decode()
-# # print(hou)
-# # gur = hou.encode("Latin1")
-# # print(gur)
+got = b'r\xc3\xa9sum\xc3\xa9'
+hou = got.decode()
+print(hou)
+gur = hou.encode("Latin1")
+print(gur)
 
 
-# # Задание 2
-# word_1='Привет'
-# word_2='это'
-# word_3='первая запись'
-# word_4='в файл'
+# Задание 2
+word_1='Привет'
+word_2='это'
+word_3='первая запись'
+word_4='в файл'
 
-# fon=open('dop7.txt','w')
-# fon.write(word_1 + ' ')
-# fon.write(word_2 + ' ')
-# fon.close()
+fon=open('dop7.txt','w')
+fon.write(word_1 + ' ')
+fon.write(word_2 + ' ')
+fon.close()
 
-# with open ('dop7.txt','a') as dop:
-#     dop.write(word_3 + ' ')
-#     dop.write(word_4)
+with open ('dop7.txt','a') as dop:
+    dop.write(word_3 + ' ')
+    dop.write(word_4)
 
 
 # # Задагие 3
@@ -56,5 +56,8 @@ with open ('dop_f.json', 'r') as file_j:
                     writer.writerow({'Id':id ,'Name':name , 'Age':age , 'Number':''})
 
 # Задание 5
-
-
+# from openpyxl import Workbook
+# wb = Workbook()
+# ws = wb.active
+# with open ('dop_csv.csv', 'r') as csv_f:
+      
