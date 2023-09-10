@@ -49,13 +49,19 @@ def get_one_users(id):
     cursor = conn.cursor()
     sql_create_database = f"select * from users where id = {id}"
     cursor.execute(sql_create_database)
-    result_users = cursor.fetchall()
-    return result_users
+    result_users = cursor.fetchone()
+    if result_users == None:
+        return 'Пользователь не найден'
+    else:
+        return list(result_users)
 
 @app.get('/posts/<id_posts>')
 def get_one_posts(id_posts):
     cursor = conn.cursor()
     sql_create_database = f"select * from posts where id_posts = {id_posts}"
     cursor.execute(sql_create_database)
-    result_posts = cursor.fetchall()
-    return result_posts
+    result_posts = cursor.fetchone()
+    if result_posts == None:
+        return 'Пост не найден'
+    else:
+        return list(result_posts)
